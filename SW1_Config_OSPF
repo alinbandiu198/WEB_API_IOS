@@ -1,0 +1,17 @@
+router ospf 1 
+router-id 1.1.1.1 
+exit
+int gig 0/1
+
+
+ip ospf 1 area 0 
+ip ospf network point-to-point 
+ 
+int loop1 
+ip add 9.9.9.9 255.255.255.0 
+ip ospf 1 area 0 
+
+exit 
+
+
+

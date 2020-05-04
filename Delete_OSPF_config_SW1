@@ -1,0 +1,14 @@
+no router ospf 1 
+ 
+
+int gig 0/1
+no sw 
+ip add 10.1.1.1 255.255.255.0  
+no ip ospf 1 area 0 
+no ip ospf network point-to-point 
+ 
+int loop1 
+ip add 9.9.9.9 255.255.255.0 
+ip ospf 1 area 0 
+
+exit 
